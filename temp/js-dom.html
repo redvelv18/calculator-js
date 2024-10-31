@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="butt">Click</button>
+    <input type="text" id="cocaina" />
+
+    <ul>
+      <li class="piss">List item 1<button>X</button></li>
+      <li class="piss">List item 2<button>X</button></li>
+      <li class="piss">List item 3<button>X</button></li>
+      <li class="piss">List item 4<button>X</button></li>
+      <li class="piss">List item 5<button>X</button></li>
+    </ul>
+
+
+    <script>
+      const buttons = document.querySelectorAll("li button");
+      buttons.forEach((button) => {
+        button.addEventListener("click", deletion);
+      });
+
+      function deletion(e) {
+        const listItem = e.target.closest("li");
+        if (listItem && listItem.parentNode) {
+          listItem.parentNode.removeChild(listItem);
+        }
+      }
+
+
+
+//////////////////////////////////////////////////
+
+
+      document.body.onload = addElement;
+
+      function addElement() {
+    
+        const Crack = document.createElement("input");
+        const Coke = document.createTextNode("Uhhhh credit card info pls?")
+
+        Crack.appendChild(Coke);
+
+        const Zaza = document.getElementById("input1")
+        document.body.insertBefore(Crack, Zaza)
+        document.body.insertBefore(Coke, Crack)
+      }
+
+    </script>
+  </body>
+</html>
